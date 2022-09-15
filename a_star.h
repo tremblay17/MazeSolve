@@ -17,6 +17,11 @@ class HashTable {
         HashTable(); //Constructor
         ~HashTable(); //Destructor
 
+        int search();
+        int insert();
+        int delIndex();
+        int hash();
+
 };
 
 class PriorityQ {
@@ -31,11 +36,9 @@ class PriorityQ {
 
         void enqueue();
         void dequeue();
-        void maxHeap();
-        void minHeap();
-        int showMin();
-        int showMax();
-        void peek();
+        int peek();
+        int isEmpty();
+        void print();
 
 };
 
@@ -45,4 +48,6 @@ class AStar {
     public:
         AStar(); //Constructor
         ~AStar(); //Destructor
+
+        int reconstructPath();
 };

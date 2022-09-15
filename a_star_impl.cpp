@@ -1,9 +1,47 @@
 #include "a_star.h"
 using namespace std;
 
+
+HashTable::HashTable()
+{
+
+}
+
+
+HashTable::~HashTable()
+{
+
+}
+
+int HashTable::search()
+{
+
+}
+
+int HashTable::delIndex()
+{
+
+}
+
+int HashTable::insert()
+{
+
+}
+
+int HashTable::hash()
+{
+
+}
+
 PriorityQ::PriorityQ()
 {
     
+}
+
+
+PriorityQ::~PriorityQ()
+{
+
 }
 
 void PriorityQ::enqueue()
@@ -16,27 +54,35 @@ void PriorityQ::dequeue()
     
 }
 
-void PriorityQ::maxHeap()
+int PriorityQ::peek()
 {
     
 }
 
-void PriorityQ::minHeap()
+int PriorityQ::isEmpty()
 {
     
 }
 
-int PriorityQ::showMin()
+void PriorityQ::print()
 {
     
 }
 
-int PriorityQ::showMax()
+
+AStar::AStar()
 {
-    
+
 }
 
-void PriorityQ::peek()
+
+AStar::~AStar()
 {
-    
+
+}
+
+
+int AStar::reconstructPath()
+{
+
 }
