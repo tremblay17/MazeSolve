@@ -5,7 +5,7 @@
 #include <fstream>
 #include <iterator>
 #include <unordered_map>
-#include <array>
+#include <vector>
 #include <list>
 #include "node.h"
 using namespace std;
