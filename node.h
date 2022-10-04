@@ -4,36 +4,16 @@ using namespace std;
 
 class Node {
 public:
-    int data;
+    int x;
+    int y;
+    int p;
     Node* next;
-    Node* prev;
   
     // Default constructor
-    Node()
-    {
-        data = 0;
-        next = NULL;
-        prev = NULL;
-    }
+    Node(): x(0), y(0), p(0), next(nullptr) {}
   
     // Parameterised Constructor
-    Node(int data)
-    {
-        this->data = data;
-        this->next = NULL;
-        this->prev = NULL;
-    }
-
-    Node(int data, Node* next) {
-        this->data = data;
-        this->next = next;
-        this->prev = NULL;
-    }
-
-    Node(int data, Node* next, Node* prev){
-        this->data = data;
-        this->next = prev;
-        this->prev = next;
-    }
+    Node(int x, int y, int p): x(x), y(y), p(p), next(nullptr) {}
+    Node(int x, int y, int p, Node* next): x(x), y(y), p(p), next(next) {}
 
 };

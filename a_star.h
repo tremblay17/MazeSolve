@@ -4,45 +4,48 @@
 #include <filesystem>
 #include <fstream>
 #include <iterator>
-#include <memory>
+#include <unordered_map>
 #include <vector>
 #include <list>
 #include "node.h"
 using namespace std;
 
-class HashTable {
+class PriorityQ_Hash {
     private:
-        int x;
+        int q_x;
+        int q_y;
+        Node* qHead;
+        Node* qTail;
+
+        int numKV; //# of key val pairs
+        int size; //size of linear probing table 
+        unordered_map<int, vector<int>> keyValPair; //key value table
+        void hashFunc();
     public:
-        HashTable(); //Constructor
-        ~HashTable(); //Destructor
+        PriorityQ_Hash(); //Constructor
+        ~PriorityQ_Hash(); //Destructor
 
-};
+        void enqueue(int pos_x, int pos_y, int p); //inserts node with priority p based on position
+        void dequeue(int p); //Finds node with priority p and removes the node
+        int top(); //element with highest priority
+        int size(); //# of elements
+        bool isEmpty(); //checks if empty
+        void print(); //prints the queue
 
-class PriorityQ {
-    private:
-        int x;
-        int y;
-        Node first;
-        Node last;
-    public:
-        PriorityQ(); //Constructor
-        ~PriorityQ(); //Destructor
-
-        void enqueue();
-        void dequeue();
-        void maxHeap();
-        void minHeap();
-        int showMin();
-        int showMax();
-        void peek();
-
+        void insert(Node* nodeToIns); //inserts into hash table from q
+        void delIndex(Node* nodeToDel); //delete from hash table
+        void search(Node* nodeToSearch); //find values in hash table
 };
 
 class AStar {
     private:
-        int x;
+
+
     public:
         AStar(); //Constructor
         ~AStar(); //Destructor
+
+        void AStar1();
+        void AStar2();
+        void AStar3();
 };
